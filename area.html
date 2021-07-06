@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="pt-Br">
+
+<head>
+
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./css/test.css">
+    <script src="/scripts/test.js"></script>
+    <title>
+        Area do Professor
+    </title>
+    <link rel="icon" type="image/jpg" href="img/Jusan.png" />
+</head>
+
+<header>
+    <h1>Painel de Notas</h1>
+    <div class="funderline"></div>
+</header>
+<main>
+    <div>
+        <p><strong>Aula:</strong> Introdução a Programação</p>
+        <p><strong>Professor:</strong> Jusan Magno</p>
+    </div>
+    <div class="card" id="cAluno">
+        <form name="inbAluno">
+            <div class="campo">
+
+                <input type="text" name="txtAluno" placeholder="Nome do Aluno" autocomplete="off">
+                <div class="underline"></div>
+            </div>
+            <div class="campo">
+                <input type="text" name="txtNota" placeholder="Nota do Aluno" autocomplete="off">
+                <div class="underline"></div>
+            </div>
+                <div class="campo">
+                    <select id="status" class="status">
+                        <option selected disabled value="">Selecione</option>
+                        <option value="Aprovado">Aprovado</option>
+                        <option value="Recuperação">Recuperação</option>
+                        <option value="Reprovado">Reprovado</option>
+                    </select>
+                    <div class="underline"></div>
+                </div>
+                <div class="button">
+                    <input class="bstyle" type="button" value="Inserir"
+                        onclick="cadAluno(txtAluno.value, txtNota.value, status.value)">
+                    <input class="bstyle" type="button" value="Excluir" onclick="delRegistro()">
+                </div>
+        </form>
+    </div>
+</main>
+<div>
+    <table id="tbAluno">
+        <thead>
+            <tr>
+                <th>ID</th>
+                <th>NOME</th>
+                <th>NOTA</th>
+                <th>STATUS</th>
+            </tr>
+            <tr>
+                <td>1</td>
+                <td>JUSAN MAGNO</td>
+                <td class="nota">9</td>
+                <td class="status-approved"> APROVADO</td>
+            </tr>
+            <td>2</td>
+            <td>CAMILA ELIAS</td>
+            <td class="nota">5</td>
+            <td class="status-recuperation">RECUPERAÇÃO</td>
+            </tr>
+            <tr>
+                <td>3</td>
+                <td>GEOVANA ELIAS</td>
+                <td class="nota">2</td>
+                <td class="status-disapproved">REPROVADO</td>
+            </tr>
+            <tr>
+                <td>4</td>
+                <td>RENATO MIRANDA</td>
+                <td class="nota">6</td>
+                <td class="status-recuperation">RECUPERAÇÃO</td>
+            </tr>
+        </thead>
+        <tbody class="tbody">
+        </tbody>
+    </table>
+</div>
+
+<p id="license" class="footer-license">© 2021 Geovana Elias </p>
+<img src="img/webdev.png" width="50" height="50" align="center">
